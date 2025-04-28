@@ -10,7 +10,6 @@
 </head>
   <body>
 
-  
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg shadow-sm">
       <div class="container">
@@ -18,7 +17,7 @@
           <i class="fas fa-golf-ball"></i>
           GreenSeeker
         </a>
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,25 +26,23 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" id="postBtn">Post</a></li>
-            <li class="nav-item"><a class="nav-link" href="golftips.html" id="tipsBtn">Golf Tips</a></li>
+            <li class="nav-item"><a class="nav-link" href="golfTips.html" id="tipsBtn">Golf Tips</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-    <div id="main-container">
-      <div id="no-posts-message" class="text-center text-muted mb-4">
+    <div id="mainContainer">
+      <div id="noPostsMessage" class="text-center text-muted mb-4">
         No posts yet!
       </div>
     </div>
-    
 
     <!-- popup -->
-    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal fade" id="postModal">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form id="modal-form">
+          <form id="modalForm">
             <div class="modal-header">
               <h5 class="modal-title" id="postModalLabel">New Round Entry</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -62,6 +59,10 @@
                   <option value="9 Holes">9 Holes</option>
                   <option value="18 Holes">18 Holes</option>
                 </select>
+              </div>
+              <div class="mb-3">
+                <label for="score" class="form-label">Score</label>
+                <input type="number" class="form-control" id="score" min="1" required>
               </div>
               <div class="mb-3">
                 <label for="greensHit" class="form-label">Greens in Regulation (Optional)</label>
@@ -84,13 +85,7 @@
       </div>
     </div>
 
-
-
-
-
-
-    
-    <footer class="text-center py-3 mt-5">
+    <footer class="text-center pt-3 pb-3 mt-5">
       <small>&copy; 2025 GreenSeeker. All rights reserved.</small>
     </footer>
 

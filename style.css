@@ -1,63 +1,57 @@
-/* General body style */
 body {
-    background-color: #e6f2e6; /* soft green background like a clear golf day */
+    background-color: #e6f2e6;
     font-family: 'Helvetica', 'Arial', sans-serif;
   }
   
-  /* Navbar green */
   .navbar {
-    background-color: #2e7d32 !important; /* deep green */
+    background-color: #2e7d32 !important;
   }
   
   .navbar-brand i {
     color: white;
-    font-size: 1.3rem;
+    font-size: 21px;
   }
-
+  
   .navbar .nav-link {
     color: white;
   }
   
-  
   .nav-link:hover {
-    color: #c8e6c9 !important; /* lighter green hover */
+    color: #c8e6c9 !important;
   }
   
-  /* Main container */
-  #main-container {
+  #mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 32px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
+    margin: 32px auto;
     max-width: 800px;
   }
   
-  /* Each post card */
-  .post-card {
+  .postCard {
     width: 100%;
-    margin-bottom: 1.5rem;
-    border: 2px solid #66bb6a; /* light golf green border */
-    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.2); /* greenish shadow */
+    margin-bottom: 24px;
+    border: 2px solid #66bb6a;
+    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.2);
     border-radius: 12px;
   }
   
-  .post-card .card-title {
-    color: #2e7d32; /* strong dark green titles */
+  .postCard .card-title {
+    color: #2e7d32;
     font-weight: bold;
   }
   
-  .post-card .card-text {
-    color: #4caf50; /* mid-green for details */
+  .postCard .card-text {
+    color: #4caf50;
   }
   
-  /* Modal appearance */
   .modal-content {
     border-radius: 15px;
-    background-color: #f0fff0; /* very pale green inside modal */
+    background-color: #f0fff0;
   }
   
   .modal-header {
@@ -73,13 +67,11 @@ body {
     border-bottom-right-radius: 15px;
   }
   
-  /* Form fields */
   .form-label {
     color: #2e7d32;
     font-weight: 500;
   }
   
-  /* Footer */
   footer {
     background-color: #2e7d32;
     color: #ffffff;
@@ -87,19 +79,19 @@ body {
   
   #navTitle {
     color: white;
-}
-
-.navbar-toggler {
+  }
+  
+  .navbar-toggler {
     border-color: white;
   }
   
-.navbar-toggler-icon {
+  .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+  }
   
-#no-posts-message {
+  #noPostsMessage {
     color: white;
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    font-size: 24px;
+    margin-top: 32px;
   }
   

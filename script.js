@@ -1,64 +1,74 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const postBtn = document.getElementById('postBtn');
-  const postModal = new bootstrap.Modal(document.getElementById('postModal'));
-  const modalForm = document.getElementById('modal-form');
-  const mainContainer = document.getElementById('main-container');
+window.onload = initializeApp;
 
-  // Open modal when post button is clicked
+
+function initializeApp() {
+  var postBtn = document.getElementById('postBtn');
+  var postModal = new bootstrap.Modal(document.getElementById('postModal'));
+  var modalForm = document.getElementById('modalForm');
+  var mainContainer = document.getElementById('mainContainer');
+
+
+
+
+
   postBtn.addEventListener('click', function(event) {
     event.preventDefault();
     postModal.show();
   });
 
-  function updateNoPostsMessage() {
-    const mainContainer = document.getElementById('main-container');
-    const noPostsMessage = document.getElementById('no-posts-message'); 
-    noPostsMessage.style.display = 'none';
-  }
-  
 
-  // Create post card
-  function createPostCard(course, holes, greens, fairways, comments) {
-    const card = document.createElement('div');
-    card.className = 'card post-card';
 
-    const cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
-
-    let html = `
-      <h5 class="card-title">${course}</h5>
-      <p class="card-text">
-        <strong>Holes Played:</strong> ${holes}<br>
-        ${greens !== "" ? `<strong>Greens Hit:</strong> ${greens}<br>` : ""}
-        ${fairways !== "" ? `<strong>Fairways Hit:</strong> ${fairways}<br>` : ""}
-        ${comments !== "" ? `<strong>Comments:</strong> ${comments}` : ""}
-      </p>
-    `;
-
-    cardBody.innerHTML = html;
-    card.appendChild(cardBody);
-
-    return card;
-  }
-
-  // Handle form submit
   modalForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const course = document.getElementById('courseName').value.trim();
-    const holes = document.getElementById('holesPlayed').value;
-    const greens = document.getElementById('greensHit').value.trim();
-    const fairways = document.getElementById('fairwaysHit').value.trim();
-    const comments = document.getElementById('comments').value.trim();
+    var course = document.getElementById('courseName').value;
+    var holes = document.getElementById('holesPlayed').value;
+    var score = document.getElementById('score').value;
+    var greens = document.getElementById('greensHit').value;
+    var fairways = document.getElementById('fairwaysHit').value;
+    var comments = document.getElementById('comments').value;
 
-    if (course && holes) {
-      const newPost = createPostCard(course, holes, greens, fairways, comments);
+    if (course && holes && score) {
+      var newPost = createPostCard(course, holes, score, greens, fairways, comments);
       mainContainer.appendChild(newPost);
 
       modalForm.reset();
       postModal.hide();
       updateNoPostsMessage();
-
     }
   });
-});
+}
+
+
+
+function updateNoPostsMessage() {
+  var noPostsMessage = document.getElementById('noPostsMessage');
+  noPostsMessage.style.display = 'none';
+}
+
+
+function createPostCard(course, holes, score, greens, fairways, comments) {
+  var card = document.createElement('div');
+  card.className = 'card postCard mb-3';
+
+
+  var cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
+
+  var html = `
+    <h5 class="card-title">${course}</h5>
+    <p class="card-text">
+      <strong>Holes Played:</strong> ${holes}<br>
+      <strong>Score:</strong> ${score}<br>
+      ${greens !== "" ? `<strong>Greens Hit:</strong> ${greens}<br>` : ""}
+      ${fairways !== "" ? `<strong>Fairways Hit:</strong> ${fairways}<br>` : ""}
+      ${comments !== "" ? `<strong>Comments:</strong> ${comments}` : ""}
+    </p>
+  `;
+
+  
+  cardBody.innerHTML = html;
+  card.appendChild(cardBody);
+
+  return card;
+}
