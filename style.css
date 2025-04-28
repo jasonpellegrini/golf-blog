@@ -1,3 +1,105 @@
-#main-container {
-    height: 100%;
+/* General body style */
+body {
+    background-color: #e6f2e6; /* soft green background like a clear golf day */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
+  
+  /* Navbar green */
+  .navbar {
+    background-color: #2e7d32 !important; /* deep green */
+  }
+  
+  .navbar-brand i {
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .navbar .nav-link {
+    color: white;
+  }
+  
+  
+  .nav-link:hover {
+    color: #c8e6c9 !important; /* lighter green hover */
+  }
+  
+  /* Main container */
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  /* Each post card */
+  .post-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 2px solid #66bb6a; /* light golf green border */
+    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.2); /* greenish shadow */
+    border-radius: 12px;
+  }
+  
+  .post-card .card-title {
+    color: #2e7d32; /* strong dark green titles */
+    font-weight: bold;
+  }
+  
+  .post-card .card-text {
+    color: #4caf50; /* mid-green for details */
+  }
+  
+  /* Modal appearance */
+  .modal-content {
+    border-radius: 15px;
+    background-color: #f0fff0; /* very pale green inside modal */
+  }
+  
+  .modal-header {
+    background-color: #2e7d32;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .modal-footer {
+    background-color: #e6f2e6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  /* Form fields */
+  .form-label {
+    color: #2e7d32;
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2e7d32;
+    color: #ffffff;
+  }
+  
+  #navTitle {
+    color: white;
 }
+
+.navbar-toggler {
+    border-color: white;
+  }
+  
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+  
+#no-posts-message {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
