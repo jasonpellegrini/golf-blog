@@ -39,7 +39,7 @@ body {
     max-width: 800px;
   }
 
-  #emptyDiv {
+  .emptyDiv {
     flex: 1
   }
   
