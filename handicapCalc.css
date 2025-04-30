@@ -1,0 +1,98 @@
+/* Global Styles for handicapCalc */
+body {
+    background-color: #f4f6f9; /* Light background similar to other pages */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Header */
+h3 {
+    color: #007bff; /* Matching header color (adjust as per your theme) */
+}
+
+/* Form Elements */
+.form-label {
+    color: #333;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Buttons */
+button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Handicap Display */
+#handicapIndex {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: #28a745; /* You can change this based on whether it's good or bad */
+}
+
+/* Rounds List */
+#roundList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#roundList li {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#roundList li:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#roundList li:hover {
+    background-color: #e9ecef;
+}
+
+
+.label-green {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+
+  .handi-nav {
+    background-color: #2e7d32;
+  }
+  
+  .handi-nav .navbar-brand,
+  .handi-nav .nav-link,
+  .handi-nav .navbar-toggler-icon {
+    color: white !important;
+  }
+  
+  .handi-nav .nav-link:hover {
+    color: #c8e6c9 !important; /* lighter green for hover */
+  }
+  .navbar{
+    border-bottom: 3px solid #FFD700;
+  }
+  
