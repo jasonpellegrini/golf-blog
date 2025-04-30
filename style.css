@@ -96,10 +96,32 @@ body {
     border-color: white;
   }
 
-  
+
   #noPostsMessage {
     color: white;
     font-size: 24px;
     margin-top: 32px;
   }
   
+#golfTipContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  
+}
+
+#golfTipContainer h1 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #286a2b;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#golfTipContainer h2 {
+  color:#286a2b;
+  margin-top: 20px;
+}
+
+#golfTipContainer p {
+  color: #4caf50;
+}
