@@ -9,8 +9,6 @@ function initializeApp() {
 
 
 
-
-
   postBtn.addEventListener('click', function(event) {
     event.preventDefault();
     postModal.show();

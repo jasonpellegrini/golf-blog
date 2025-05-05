@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         const bestDiffs = diffs.slice(0, Math.min(3, diffs.length));
         const avg = bestDiffs.reduce((a, b) => a + b, 0) / bestDiffs.length;
-        handicap = avg * 0.96; // Adjusting by 0.96 as per golf handicap rules
+        handicap = avg * 0.96;
       }
   
       handicapDisplay.innerText = handicap.toFixed(1);
